@@ -1,0 +1,127 @@
+body {
+    font-family: sans-serif;
+    color: aliceblue;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000000;
+}
+
+.input-area button, .auth-container button {
+    background-color: #007bff;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: rgb(15, 236, 155);
+    animation-direction: alternate-reverse;
+}
+
+.input-area input, .auth-container input {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 90%;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    height: 80vh;
+    box-shadow: 0 5px 170px rgb(255, 255, 255);
+    border-radius: 8px;
+    overflow:hidden;
+}
+
+.auth-container {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.chat-container {
+    display: flex;
+    width: 100%;
+    background-color: rgb(216, 63, 63);
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-area {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.messages {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.input-area {
+    padding: 10px;
+    border-top: 1px solid #822f2f;
+    display: flex;
+}
+
+.input-area input {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.user-list, .room-list {
+    margin-top: 20px;
+    overflow-y: auto;
+}
+
+.user-list h3, .room-list h3{
+    margin-bottom: 10px;
+}
+
+.user-list ul, .room-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.user-list li, .room-list li {
+    padding: 8px;
+    border-bottom: 1px solid #d13d3d;
+    cursor: pointer;
+}
+
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+}
